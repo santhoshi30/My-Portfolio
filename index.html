@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background">
+        <div class="one">
+            
+            <nav>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+               
+            </nav>
+            <div class="home-text">
+                <h1>Hi , Myself <span>ANCHURU SAI SANTHOSHI</span><br> From Hyderabad.</h1>
+            
+                
+
+
+            </div>
+    </div>
+</div>
+
+<!--------------------------about---------->
+<div id="about">
+    <div class="about-me">
+        <div class="row">
+            <div class="me">
+                <img src="images/santhu photo_page-0001.jpg">
+            </div>
+                <div class="about-me-text">
+                    <h1 class="about-text">ABOUT ME</h1>
+                    <P>Myself ANCHURU SAI SANTHOSHI ,from Hyderabad,Telangana<br>
+                        currently a third year undergraduate student at<br>
+                         Visvesvaraya National Institute of Technology</P>
+
+                    <p> My objective is to Seek an opportunity in the engineering industry, where I can leverage my technical skills, adaptability, and passion for innovation to contribute to projects, learn from experienced professionals, and develop a successful career.rowth of the organization</p>
+                       <div class="button-container">
+                        <button class="btn" onclick="window.open('resume new.pdf')"
+                            >DOWNLOAD CV
+                        </button>
+                       
+
+                       
+                      
+                    </div>
+                </div>   
+            
+        </div>
+    </div>
+</div>
+<!--------------           projects---------->
+
+<div id="projects">
+    <div class="my-projects">
+        <h1 class="about-me-text">MY PROJECTS</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="./images/laser.jpg">
+                <div class="layer">
+                    <h3>LASER SECURITY ALARM System </h3>
+                   <P>A laser alarm system operates by projecting a beam of invisible laser light across a doorway or window opening. When the light is broken, it activates a buzzer or alarm. The principles are very similar to those of lower tech burglar alarms. A laser alarm requires only slightly more sophisticated electronics and can be put together by anyone with a soldering gun and a knack for tinkering with basic circuits and transistors.</P>
+
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/Clap-ON-OFF-switch-circuit.jpg">
+                <div class="layer">
+                    <h3> CLAP ON CLAP OFF SWITCH USING IC7474 </h3>
+                   <P>:The CLAP ON CLAP OFF SWITCH could be used in home automation.It works as a switch which makes devices ON ans OFF by making a clap sound. </P>
+                    
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/Infrared-Sensor-Circuit-Diagram.jpg">
+                <div class="layer">
+                    <h3> IR PROXIMITY SENSOR </h3>
+                   <P> IR technology is used in daily life and also in industries for different purposes.The main benefits of IR sensors are low power usage, their simple design & their convenient features.IR signals are not noticeable by the human eye. The IR radiation in the electromagnetic spectrum can be found in the regions of the visible & microwave.</P>
+                    
+                </div>
+                
+            </div>
+            
+                
+            
+        </div>
+
+    </div>
+</div>
+<!----------------------contact-->
+<div id="contact">
+    <div class="contact-me">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="about-me-text">CONTACT ME</h1>
+                <P></P><i class="fa-sharp fa-solid fa-paper-plane"></i> santhoshianchuru@gmail.com</P>
+                <P></P><i class="fa-sharp fa-solid fa-paper-plane"></i> 8019598066</P>
+               
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet"> <input type="text " name="Name" placeholder="your name">
+                    <input type="email" name="Email" placeholder="Email">
+                    <textarea name="message" rows="6" placeholder="your message"></textarea>
+                    <button class="button btn" type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu()
+    {
+        sidemenu.style.left="0"  
+    }
+    function closemenu()
+    {
+        sidemenu.style.left="-200px"  
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbww6Dy-jZiuRYQ6nugMU-XaCW2mF_si8YkUuydoUD9O2ExSBI7gVDu38vwQlvYLPdTP/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    
+</body>
+</html>
